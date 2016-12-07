@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ronny-springer/starter-kit/issues"
   },
-  "homepage": "https://github.com/ronny-springer/starter-kit#readme"
+  "homepage": "https://github.com/ronny-springer/starter-kit#readme",
+  "dependencies": {
+    "webpack": "^1.14.0"
+  }
 }
