@@ -1,0 +1,22 @@
+{
+  "name": "starter-kit",
+  "version": "0.0.1",
+  "description": "starter kit for general project dojos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronny-springer/starter-kit.git"
+  },
+  "keywords": [
+    "Webpack"
+  ],
+  "author": "Ronny Springer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronny-springer/starter-kit/issues"
+  },
+  "homepage": "https://github.com/ronny-springer/starter-kit#readme"
+}
