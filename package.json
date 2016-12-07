@@ -2,7 +2,7 @@
   "name": "starter-kit",
   "version": "0.0.1",
   "description": "starter kit for general project dojos",
-  "main": "index.js",
+  "main": "./web/entry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
