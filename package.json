@@ -4,7 +4,9 @@
   "description": "starter kit for general project dojos",
   "main": "./web/entry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "start": "",
+    "build": ""
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,8 @@
   },
   "devDependencies": {
     "css-loader": "^0.26.1",
-    "style-loader": "^0.13.1"
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "webpack-dev-server": "^1.16.2"
   }
 }
