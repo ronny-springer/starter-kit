@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit uses Webpack and Typescript.
+The Starter-Kit uses Webpack, Typescript, Karma, Mocha.
 
 #### Inspiration came across:
 
@@ -12,18 +12,13 @@ The Starter-Kit uses Webpack and Typescript.
 
 1. git clone the project
 2. cd into the project
-3. run 'npm install' from comand line tool
-4. install typescript globally:
-```
-$ npm install typescript -g
-```
-5. install webpack and webpack-dev-server globally:
-```
-$ npm install webpack -g
-$ npm install webpack-dev-server -g
-```
-6. run 'webpack-dev-server' from comand line tool:
-```
-webpack-dev-server
-```
+3. run `$ npm install` from comand line tool
+4. install global dependency via command line tool
+`$ npm i -g typescript webpack webpack-dev-server`
+6. execute `$ npm start` to start webpack-dev-server from comand line tool
 7. navigate to 'http://localhost:8080/webpack-dev-server' at browser
+
+#### Execute unit testing:
+
+1. place `*.spec.ts` files inside modules close to productive code
+2. run `$ npm test` command from command line tool
