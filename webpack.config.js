@@ -2,14 +2,14 @@ const debug = process.env.NODE_ENV !== "production";
 const WEBDIR = './web';
 
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require("path");
 
 
 module.exports = {
-    context: path.resolve(__dirname, WEBDIR),
-    devtool: debug ? 'inline-sourcemap' : null,
+    context: path.resolve(__dirname, WEBDIR),    
     entry: {
-        app: './src/entry.js',
+        app: './src/main.ts',
     },
     output: {
         path: path.join(__dirname, WEBDIR, './dist'),
@@ -25,13 +25,14 @@ module.exports = {
         contentBase: path.join(__dirname, WEBDIR, './dist'),
         inline: true
     },  
-    plugins: debug ? [] : [
-        new HotModuleReplacementPlugin(),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
+    devtool: debug ? 'inline-sourcemap' : null,
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        })
     ],
     resolve: {
-        extensions: ['', '.js', '.json', '.ts']
+        extensions: ['', '.js', '.json', '.ts'],
+        modules: ['node_modules']
     }
 };
