@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit uses Webpack, Typescript, Karma, Mocha.
+The Starter-Kit uses Webpack, Typescript, Karma, Mocha, EsLint.
 
 #### Inspiration came across:
 
@@ -14,7 +14,7 @@ The Starter-Kit uses Webpack, Typescript, Karma, Mocha.
 2. cd into the project
 3. run `$ npm install` from comand line tool
 4. install global dependency via command line tool
-`$ npm i -g typescript webpack webpack-dev-server`
+`$ npm i -g typescript tslint webpack webpack-dev-server`
 6. execute `$ npm start` to start webpack-dev-server from comand line tool
 7. navigate to 'http://localhost:8080/webpack-dev-server' at browser
 
