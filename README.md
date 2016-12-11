@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit uses Webpack, Typescript, Karma, Mocha, EsLint.
+The Starter-Kit uses Webpack, Typescript, Tslint, Karma, Mocha.
 
 #### Inspiration came across:
 
