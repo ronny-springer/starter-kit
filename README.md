@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit as tech stack wrapped around Webpack, Angular2, Typescript, Tslint, Karma, Mocha.
+The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescript, Tslint, Karma, Mocha.
 
 #### Inspiration came across:
 
@@ -15,10 +15,8 @@ The Starter-Kit as tech stack wrapped around Webpack, Angular2, Typescript, Tsli
 1. git clone the project
 2. cd into the project
 3. run `$ npm install` from command line tool
-4. install global dependency via command line tool
-`$ npm i -g typescript tslint webpack webpack-dev-server`
-6. execute `$ npm start` to start webpack-dev-server from comand line tool
-7. navigate to 'http://localhost:8080/webpack-dev-server' at browser
+4. execute `$ npm start` to start webpack-dev-server from comand line tool
+5. navigate to 'http://localhost:8080/webpack-dev-server' at browser
 
 #### Execute unit testing:
 
