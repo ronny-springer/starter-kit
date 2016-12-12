@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit uses Webpack, Angular2, Typescript, Tslint, Karma, Mocha.
+The Starter-Kit as tech stack wrapped around Webpack, Angular2, Typescript, Tslint, Karma, Mocha.
 
 #### Inspiration came across:
 
@@ -8,6 +8,7 @@ The Starter-Kit uses Webpack, Angular2, Typescript, Tslint, Karma, Mocha.
 2. [Angular 2: Why TypeScript?](https://vsavkin.com/writing-angular-2-in-typescript-1fa77c78d8e8#.istvs01i8), 07/22/2016, Victor Savkin
 3. [TypeScript won](https://medium.com/@basarat/typescript-won-a4e0dfde4b08#.yj1h8u528), 04/27/2016, Basarat
 4. [task automation with npm run](http://substack.net/task_automation_with_npm_run), 11/18/2013, James Halliday
+5. [Learning Angular v2](https://angular.io/docs/ts/latest/guide/learning-angular.html)
 
 #### Start a new project:
 
