@@ -2,7 +2,8 @@ const debug = process.env.NODE_ENV !== "production";
 const WEBDIR = './web';
 
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackplugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require("path");
 
 
@@ -18,7 +19,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.ts$/, loader: 'ts-loader' },
-            { test: /\.css$/, loader: 'style-loader!css-loader' }
+            { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' }
         ]
     },
     devServer: {
@@ -27,9 +28,14 @@ module.exports = {
     },  
     devtool: debug ? 'inline-sourcemap' : null,
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        })
+        new HtmlWebpackplugin({
+            template: path.resolve(__dirname, WEBDIR, './src/index.html')
+        }),
+        new CopyWebpackPlugin([{
+            context: path.resolve(__dirname, WEBDIR, './src'),
+            from: '**/*.html',
+            toType: 'dir'
+        }], {copyUnmodified: true})
     ],
     resolve: {
         extensions: ['', '.js', '.json', '.ts'],

@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 
 @Component({
 	selector: 'app-component',
-	template: `<h1>{{headline}}</h1>`,
+	templateUrl: './modules/app/app.component.html',
 	providers: [AppService]
 })
 
