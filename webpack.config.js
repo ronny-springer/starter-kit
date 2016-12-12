@@ -2,24 +2,39 @@ const debug = process.env.NODE_ENV !== "production";
 const WEBDIR = './web';
 
 var webpack = require('webpack');
+var path = require("path");
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
+
 var HtmlWebpackplugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var path = require("path");
-
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, WEBDIR),    
     entry: {
-        app: './src/main.ts',
+        app: ['./src/main.ts', './src/main.css']
     },
     output: {
         path: path.join(__dirname, WEBDIR, './dist'),
         filename: '[name].min.js'
     },    
     module: {
+        preLoaders: [
+            { 
+                test: /\.css$/, 
+                loader: 'import-glob-loader'
+            }
+        ],
         loaders: [
-            { test: /\.ts$/, loader: 'ts-loader' },
-            { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' }
+            { 
+                test: /\.ts$/,
+                loader: 'ts-loader' 
+            },
+            { 
+                test: /\.css$/, 
+                loader: ExtractTextPlugin.extract('css!postcss') 
+            }
         ]
     },
     devServer: {
@@ -27,9 +42,16 @@ module.exports = {
         inline: true
     },  
     devtool: debug ? 'inline-sourcemap' : null,
+    postcss: function () {
+        return [autoprefixer, precss];
+    },
     plugins: [
+        new ExtractTextPlugin(
+            "app.bundle.css"
+        ),
         new HtmlWebpackplugin({
-            template: path.resolve(__dirname, WEBDIR, './src/index.html')
+            template: path.resolve(__dirname, WEBDIR, './src/index.html'),
+            inject: 'body'
         }),
         new CopyWebpackPlugin([{
             context: path.resolve(__dirname, WEBDIR, './src'),

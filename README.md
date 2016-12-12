@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescript, Tslint, Karma, Mocha.
+The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescript, Tslint, Karma, Mocha, PostCSS.
 
 #### Inspiration came across:
 
