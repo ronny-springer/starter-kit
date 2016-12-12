@@ -1,15 +1,4 @@
-import 'zone.js';
-import 'reflect-metadata';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule }              from './modules/app/app.module';
 
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { AppComponent } from "./modules/app/app.component";
-
-@NgModule({
-    imports: [
-        BrowserModule        
-    ],
-    declarations: [ AppComponent ],
-    bootstrap: [ AppComponent ]
-})
-export class AppModule {}
+platformBrowserDynamic().bootstrapModule(AppModule);
