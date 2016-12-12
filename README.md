@@ -1,6 +1,6 @@
 # starter-kit
 
-The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescript, Tslint, Karma, Mocha, PostCSS.
+The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescript, Tslint, Karma, Mocha, Chai, PostCSS, CSSnext & Short.
 
 #### Inspiration came across:
 
@@ -9,6 +9,7 @@ The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescri
 3. [TypeScript won](https://medium.com/@basarat/typescript-won-a4e0dfde4b08#.yj1h8u528), 04/27/2016, Basarat
 4. [task automation with npm run](http://substack.net/task_automation_with_npm_run), 11/18/2013, James Halliday
 5. [Learning Angular v2](https://angular.io/docs/ts/latest/guide/learning-angular.html)
+6. [Why Should You Use PostCSS](http://www.fromdev.com/2016/02/why-should-you-use-postcss.html), 2/24/2016, Sachin FromDev
 
 #### Start a new project:
 

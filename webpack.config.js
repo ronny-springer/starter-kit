@@ -4,7 +4,9 @@ const WEBDIR = './web';
 var webpack = require('webpack');
 var path = require("path");
 var precss = require('precss');
+var cssnext = require('cssnext')();
 var autoprefixer = require('autoprefixer');
+var postcssShort = require('postcss-short');
 
 var HtmlWebpackplugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -17,7 +19,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, WEBDIR, './dist'),
-        filename: '[name].min.js'
+        filename: '[name].bundle.js'
     },    
     module: {
         preLoaders: [
@@ -33,7 +35,7 @@ module.exports = {
             },
             { 
                 test: /\.css$/, 
-                loader: ExtractTextPlugin.extract('css!postcss') 
+                loader: ExtractTextPlugin.extract('css!postcss?sourceMap=inline') 
             }
         ]
     },
@@ -42,8 +44,9 @@ module.exports = {
         inline: true
     },  
     devtool: debug ? 'inline-sourcemap' : null,
+    watch: true,
     postcss: function () {
-        return [autoprefixer, precss];
+        return [autoprefixer, precss, postcssShort, cssnext];
     },
     plugins: [
         new ExtractTextPlugin(
@@ -60,7 +63,7 @@ module.exports = {
         }], {copyUnmodified: true})
     ],
     resolve: {
-        extensions: ['', '.js', '.json', '.ts'],
+        extensions: ['', '.js', '.json', '.ts', 'html', 'css'],
         modules: ['node_modules']
     }
 };
