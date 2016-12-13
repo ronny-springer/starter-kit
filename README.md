@@ -17,7 +17,7 @@ The Starter-Kit as tech stack wrapped around Nodejs, Webpack, Angular2, Typescri
 2. cd into the project
 3. run `$ npm install` from command line tool
 4. execute `$ npm start` to start webpack-dev-server from comand line tool
-5. navigate to 'http://localhost:8080/webpack-dev-server' at browser
+5. navigate to [http://localhost:8080/](http://localhost:8080/) at browser
 
 #### Execute unit testing:
 
